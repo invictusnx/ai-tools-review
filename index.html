@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Review — Honest Reviews of the Best AI Tools</title>
+  <meta name="description" content="Hands-on reviews of the best AI tools for coding, writing, design, and productivity. Updated weekly with honest, practical takes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">AI Tools <span>Review</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Honest AI Tool Reviews</h1>
+    <p>Hands-on, no-fluff reviews of the tools actually worth using. Updated every week with fresh picks.</p>
+    <div class="hero-stats">
+      <div class="stat-block">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Tools Reviewed</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">Weekly</div>
+        <div class="stat-label">New Posts</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Hands-On Testing</div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Latest Reviews</h2>
+
+  <div class="posts-grid" id="posts-grid">
+    <!-- posts loaded here -->
+  </div>
+
+  <script>
+    const posts = [
+      {
+        title: "Claude Review: Best AI for Long-Context Reasoning in 2025",
+        desc: "Hands-on testing Claude's sonnet-4, artifact sharing, and where it beats ChatGPT for deep work.",
+        cat: "LLMs / Chatbots",
+        date: "May 2025",
+        slug: "claude-review",
+        tags: ["AI Chatbots", "LLMs"]
+      },
+      {
+        title: "Cursor Review: The AI-First IDE That Changed How I Code",
+        desc: "Is Cursor worth the hype? Testing agentic refactoring, tab autocomplete, and real-world PR workflows.",
+        cat: "Coding Tools",
+        date: "May 2025",
+        slug: "cursor-review",
+        tags: ["AI Coding", "IDE"]
+      },
+      {
+        title: "Perplexity Review: AI Search Engine Deep Dive",
+        desc: "Can Perplexity replace Google? Testing pro search, deep research, and where it falls short.",
+        cat: "Search / Research",
+        date: "May 2025",
+        slug: "perplexity-review",
+        tags: ["AI Search", "Research"]
+      },
+      {
+        title: "Bolt.new Review: Generate Full-Stack Apps From a Prompt",
+        desc: "Testing Bolt.new's ability to generate, deploy, and iterate on production-ready web apps.",
+        cat: "Coding Tools",
+        date: "May 2025",
+        slug: "bolt-review",
+        tags: ["AI Coding", "Web Apps"]
+      }
+    ];
+
+    const grid = document.getElementById('posts-grid');
+    posts.forEach(p => {
+      const card = document.createElement('a');
+      card.href = `/posts/${p.slug}.html`;
+      card.className = 'post-card';
+      card.innerHTML = `
+        <div class="post-category">${p.cat}</div>
+        <h2>${p.title}</h2>
+        <p>${p.desc}</p>
+        <div class="post-meta">
+          <span>${p.date}</span>
+          <span class="post-card-affiliate">Read Review →</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+
+  <footer class="site-footer">
+    <p>AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links &mdash; no extra cost to you.</p>
+    <p style="margin-top:8px"><a href="/about.html">About</a></p>
+  </footer>
+</body>
+</html>

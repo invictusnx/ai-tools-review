@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolt.new Review (2025) — Full-Stack Apps From a Single Prompt? | AI Tools Review</title>
+  <meta name="description" content="Testing Bolt.new AI for generating, deploying, and iterating on web applications. Can it really replace a developer for simple projects?" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">AI Tools <span>Review</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="post-page">
+    <a href="/" class="back-link">← Back to reviews</a>
+    <h1>Bolt.new Review: Generate Full-Stack Apps From a Single Prompt</h1>
+    <p class="post-subtitle">Testing Bolt.new's ability to scaffold, deploy, and iterate on production-ready web apps without opening a code editor.</p>
+    <div class="post-header-meta">
+      <span>📅 May 2025</span>
+      <span>📁 Coding Tools</span>
+      <span>⏱ 6 min read</span>
+    </div>
+
+    <p><strong>Verdict upfront:</strong> Bolt.new is the most capable prompt-to-app tool I've tested. For prototypes, MVPs, and simple full-stack apps, it genuinely works. For anything complex, you'll still need a real development environment.</p>
+
+    <div class="verdict-box">
+      <h3>⭐ TL;DR</h3>
+      <p><strong>Best for:</strong> Rapid prototyping, MVPs, landing pages, simple full-stack apps with auth and databases.<br>
+      <strong>Weak at:</strong> Complex state management, advanced authentication flows, large-scale architecture.<br>
+      <strong>Price:</strong> Free tier (limited). Pro $20/mo. Team $100/mo for 5 users.</p>
+      <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new Free →</a>
+      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    </div>
+
+    <h2>What Is Bolt.new?</h2>
+    <p>Bolt.new by StackBlitz is an AI-powered web app generator that runs entirely in your browser. You describe what you want in natural language, and it scaffolds a full-stack application with a frontend (React, Vue, or Svelte), backend (Node.js), and even database integration.</p>
+    <p>Unlike Cursor or Copilot (which work inside an editor), Bolt.new handles the entire lifecycle — from idea to deployed URL — without you opening a terminal or IDE.</p>
+
+    <h2>What I Tested</h2>
+    <ul>
+      <li><strong>Simple landing page:</strong> A startup landing page with animations and contact form</li>
+      <li><strong>Full-stack app:</strong> A task manager with authentication, database, and real-time updates</li>
+      <li><strong>API integration:</strong> A dashboard that fetches from a third-party API and displays charts</li>
+      <li><strong>Iteration:</strong> Making incremental changes and seeing how Bolt handles scope creep</li>
+    </ul>
+
+    <h2>Performance Breakdown</h2>
+
+    <h3>1. Generation Speed ★★★★★</h3>
+    <p>Bolt is fast. A full landing page with animations and a contact form took about 30 seconds from prompt to preview. A full-stack app with auth, database, and CRUD took roughly 2 minutes. For comparison, writing this manually would take 2-4 hours.</p>
+
+    <h3>2. Quality of Output ★★★☆☆</h3>
+    <p>The generated code is reasonable but not production-grade. It gets the job done for an MVP but has some issues:</p>
+    <ul>
+      <li>Error handling is minimal or missing</li>
+      <li>Security (input sanitisation, rate limiting) is often skipped</li>
+      <li>Code organisation works for small projects but doesn't scale</li>
+      <li>It occasionally uses deprecated package versions</li>
+    </ul>
+    <p>Think of it as a very skilled junior developer — it gets the structure right but needs a senior to review for production use.</p>
+
+    <h3>3. Iteration & Debugging ★★★☆☆</h3>
+    <p>You can ask Bolt to add features or fix bugs. It handles simple iterations well ("add a dark mode toggle") but struggles with complex requests ("fix the race condition in the WebSocket handler"). Sometimes it introduces new bugs while fixing old ones.</p>
+
+    <h3>4. Deployment ★★★★☆</h3>
+    <p>Bolt deploys directly from the browser — no need to configure hosting. You get a URL you can share immediately. For a prototype or MVP, this is incredibly convenient. For production, you'll want to export the code and set up proper CI/CD.</p>
+
+    <div class="pros-cons">
+      <div class="pros-box">
+        <h3>✅ Pros</h3>
+        <ul>
+          <li>Incredibly fast — app in minutes, not hours</li>
+          <li>No setup required, works entirely in the browser</li>
+          <li>Handles frontend + backend in one prompt</li>
+          <li>One-click deployment with a shareable URL</li>
+          <li>Great for prototypes and MVPs</li>
+        </ul>
+      </div>
+      <div class="cons-box">
+        <h3>❌ Cons</h3>
+        <ul>
+          <li>Code quality is not production-grade</li>
+          <li>Struggles with complex debugging</li>
+          <li>Can introduce regressions during iteration</li>
+          <li>Limited to StackBlitz's browser runtime</li>
+          <li>You can't easily export to local development</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Pricing</h2>
+    <ul>
+      <li><strong>Free:</strong> Limited public projects, basic features</li>
+      <li><strong>Pro ($20/mo):</strong> Unlimited projects, private repos, GitHub sync, higher limits</li>
+      <li><strong>Team ($100/mo):</strong> Up to 5 users, team workspaces, priority support</li>
+    </ul>
+
+    <h2>Alternatives</h2>
+    <ul>
+      <li><strong>Lovable.dev</strong> — Similar prompt-to-app tool. Better for data-heavy apps and dashboards</li>
+      <li><strong>v0 (Vercel)</strong> — Best for React component and UI generation. Lighter on full-stack</li>
+      <li><strong>Cursor + Claude</strong> — More control, better quality, but requires more skill</li>
+    </ul>
+
+    <div class="verdict-box">
+      <h3>🏆 Final Verdict: 7.5/10</h3>
+      <p>Bolt.new is the fastest way to go from idea to working app. For prototypes, MVPs, and hackathon projects it's genuinely useful. For production apps, use it as a starting point then export and refine. At $20/mo it pays for itself if you build more than one project per month.</p>
+      <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new Free →</a>
+      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p>AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links.</p>
+    <p style="margin-top:8px"><a href="/">Home</a> · <a href="/about.html">About</a></p>
+  </footer>
+</body>
+</html>

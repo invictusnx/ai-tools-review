@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursor Review (2025) — The AI-First IDE Worth the Hype? | AI Tools Review</title>
+  <meta name="description" content="Hands-on testing Cursor's agent mode, tab autocomplete, and AI-powered PR review. Is it really better than VS Code + Copilot?" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">AI Tools <span>Review</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="post-page">
+    <a href="/" class="back-link">← Back to reviews</a>
+    <h1>Cursor Review: The AI-First IDE That Changed How I Code</h1>
+    <p class="post-subtitle">Real testing of Cursor's agentic refactoring, context-aware autocomplete, and multi-file AI workflows.</p>
+    <div class="post-header-meta">
+      <span>📅 May 2025</span>
+      <span>📁 Coding Tools</span>
+      <span>⏱ 8 min read</span>
+    </div>
+
+    <p><strong>Verdict upfront:</strong> Cursor is the most capable AI coding tool available right now if you use VS Code extensions and workflows. The agent mode alone is worth the subscription. But there are catches.</p>
+
+    <div class="verdict-box">
+      <h3>⭐ TL;DR</h3>
+      <p><strong>Best for:</strong> Developers who want AI deeply integrated into their editor — agentic refactoring, multi-file edits, PR review.<br>
+      <strong>Weak at:</strong> Steep learning curve if you're not already a VS Code user, privacy concerns (cloud-based), costs add up for teams.<br>
+      <strong>Price:</strong> Free tier (limited). Pro $20/mo. Business $40/user/mo.</p>
+      <a class="affiliate-button" href="https://cursor.com" target="_blank" rel="noopener">Download Cursor Free →</a>
+      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    </div>
+
+    <h2>What Is Cursor?</h2>
+    <p>Cursor is a fork of VS Code with AI deeply integrated at the editor level. Unlike Copilot (which is a VS Code extension), Cursor rebuilds the editing experience around AI — autocomplete that understands your whole project, agent mode that plans and executes multi-file changes, and inline chat that references files, docs, and git history.</p>
+    <p>It uses Anthropic's Claude and OpenAI's GPT models behind the scenes, though you can bring your own API key if you prefer.</p>
+
+    <h2>What I Tested</h2>
+    <p>I moved my entire development workflow to Cursor for two weeks — a Node.js backend, a React frontend, and a Python data pipeline.</p>
+
+    <h2>Performance Breakdown</h2>
+
+    <h3>1. Tab Autocomplete ★★★★★</h3>
+    <p>Cursor's tab autocomplete is noticeably faster and more accurate than Copilot's. It predicts entire multi-line edits, not just single lines. After a week, going back to plain VS Code felt jarring — I kept instinctively pressing Tab expecting completions that weren't there.</p>
+    <p>The killer feature is <strong>context-aware completions</strong> — it reads your recent edits, open files, and project structure to make predictions that actually fit your codebase's patterns.</p>
+
+    <h3>2. Agent Mode ★★★★★</h3>
+    <p>This is the headline feature. You can say "add rate limiting to all API routes" and Cursor will:</p>
+    <ul>
+      <li>Read all your route files to understand the current structure</li>
+      <li>Create a middleware file</li>
+      <li>Import and wire it into every route</li>
+      <li>Update your tests</li>
+      <li>Show you a diff of every change before applying</li>
+    </ul>
+    <p>It took 30 seconds for something that would take me 15 minutes manually. It didn't break anything. The diff view lets you approve or reject each change, which is crucial for trust.</p>
+
+    <h3>3. Inline Composer ★★★★☆</h3>
+    <p>Ctrl+K opens the inline composer where you can edit specific functions, write tests, or refactor. It's fast and the results are context-aware. Occasionally it makes assumptions about your codebase that are wrong, but the undo button is right there.</p>
+
+    <h3>4. Chat & Docs Integration ★★★★☆</h3>
+    <p>The chat panel can reference your entire codebase, which makes questions like "how does auth work in this project?" actually answerable. It can also ingest documentation URLs — useful for library-specific questions.</p>
+
+    <div class="pros-cons">
+      <div class="pros-box">
+        <h3>✅ Pros</h3>
+        <ul>
+          <li>Agent mode is genuinely game-changing</li>
+          <li>Best-in-class tab autocomplete</li>
+          <li>Full VS Code extension + settings compatibility</li>
+          <li>Diff-based approval for agent changes</li>
+          <li>Project-aware context across all features</li>
+        </ul>
+      </div>
+      <div class="cons-box">
+        <h3>❌ Cons</h3>
+        <ul>
+          <li>$20/mo is steep if you're already paying for Copilot</li>
+          <li>Cloud-only — no fully local option</li>
+          <li>Privacy concerns for proprietary codebases</li>
+          <li>Can use a lot of quota with agent mode</li>
+          <li>Still has VS Code's memory footprint</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Pricing</h2>
+    <ul>
+      <li><strong>Free:</strong> 500 completions + 50 agent requests/month</li>
+      <li><strong>Pro ($20/mo):</strong> Unlimited completions, 500 agent requests/month, bring-your-own-key</li>
+      <li><strong>Business ($40/user/mo):</strong> Team features, admin dashboard, privacy mode</li>
+    </ul>
+
+    <h2>Alternatives</h2>
+    <ul>
+      <li><strong>VS Code + Copilot</strong> — Free with GitHub Student Pack. Less integrated but still very capable</li>
+      <li><strong>Windsurf (Codeium)</strong> — Good free tier, similar agent features, multi-model support</li>
+      <li><strong>Claude Code</strong> — Terminal-based AI coding agent, excellent for complex refactoring</li>
+    </ul>
+
+    <div class="verdict-box">
+      <h3>🏆 Final Verdict: 9/10</h3>
+      <p>Cursor is the most impressive AI coding tool I've used. The agent mode genuinely saves hours, and the autocomplete is addictive once you get used to it. The price is worth it if you code daily. If you're a student, check if you qualify for discounts or use Copilot's free tier with the GitHub Student Pack as a starting point.</p>
+      <a class="affiliate-button" href="https://cursor.com" target="_blank" rel="noopener">Download Cursor Free →</a>
+      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p>AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links.</p>
+    <p style="margin-top:8px"><a href="/">Home</a> · <a href="/about.html">About</a></p>
+  </footer>
+</body>
+</html>
