@@ -7,102 +7,249 @@
   <meta name="description" content="Hands-on reviews of the best AI tools for coding, writing, design, and productivity. Updated weekly with honest, practical takes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">AI Tools <span>Review</span></a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <h1>Honest AI Tool Reviews</h1>
-    <p>Hands-on, no-fluff reviews of the tools actually worth using. Updated every week with fresh picks.</p>
-    <div class="hero-stats">
-      <div class="stat-block">
-        <div class="stat-number">20+</div>
-        <div class="stat-label">Tools Reviewed</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-number">Weekly</div>
-        <div class="stat-label">New Posts</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Hands-On Testing</div>
-      </div>
-    </div>
-  </section>
+<!-- ===== FLUID BLOB BG ===== -->
+<div id="fluid-bg" aria-hidden="true">
+  <div class="blob" id="b0"></div>
+  <div class="blob" id="b1"></div>
+  <div class="blob" id="b2"></div>
+  <div class="blob" id="b3"></div>
+</div>
 
-  <h2 class="section-title">Latest Reviews</h2>
+<!-- ===== SPEED LINES ===== -->
+<div class="speed-lines" id="speedLines" aria-hidden="true"></div>
 
-  <div class="posts-grid" id="posts-grid">
-    <!-- posts loaded here -->
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <a href="/" class="logo">AI TOOLS <span>REVIEW</span></a>
+  <nav>
+    <a href="/about.html">About</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="bg-num" aria-hidden="true">AI</div>
+
+  <div class="hero-badge"><span class="dot"></span>Honest Reviews Since 2025</div>
+
+  <h1>AI TOOLS<br>REVIEW</h1>
+
+  <p class="hero-sub">Tested · Rated · Explained</p>
+  <div class="hero-divider"></div>
+  <p class="hero-tagline">Hands-on, no-fluff reviews of the AI tools actually worth using. Every tool gets real testing before it gets a verdict.</p>
+
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hs-num">20+</div><div class="hs-label">Tools Reviewed</div></div>
+    <div class="hero-stat"><div class="hs-num">Weekly</div><div class="hs-label">New Posts</div></div>
+    <div class="hero-stat"><div class="hs-num">100%</div><div class="hs-label">Hands-On Testing</div></div>
   </div>
 
-  <script>
-    const posts = [
-      {
-        title: "Claude Review: Best AI for Long-Context Reasoning in 2025",
-        desc: "Hands-on testing Claude's sonnet-4, artifact sharing, and where it beats ChatGPT for deep work.",
-        cat: "LLMs / Chatbots",
-        date: "May 2025",
-        slug: "claude-review",
-        tags: ["AI Chatbots", "LLMs"]
-      },
-      {
-        title: "Cursor Review: The AI-First IDE That Changed How I Code",
-        desc: "Is Cursor worth the hype? Testing agentic refactoring, tab autocomplete, and real-world PR workflows.",
-        cat: "Coding Tools",
-        date: "May 2025",
-        slug: "cursor-review",
-        tags: ["AI Coding", "IDE"]
-      },
-      {
-        title: "Perplexity Review: AI Search Engine Deep Dive",
-        desc: "Can Perplexity replace Google? Testing pro search, deep research, and where it falls short.",
-        cat: "Search / Research",
-        date: "May 2025",
-        slug: "perplexity-review",
-        tags: ["AI Search", "Research"]
-      },
-      {
-        title: "Bolt.new Review: Generate Full-Stack Apps From a Prompt",
-        desc: "Testing Bolt.new's ability to generate, deploy, and iterate on production-ready web apps.",
-        cat: "Coding Tools",
-        date: "May 2025",
-        slug: "bolt-review",
-        tags: ["AI Coding", "Web Apps"]
-      }
-    ];
+  <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-stripes">
+    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
+    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
+    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
+  </div>
+</section>
 
-    const grid = document.getElementById('posts-grid');
-    posts.forEach(p => {
-      const card = document.createElement('a');
-      card.href = `/posts/${p.slug}.html`;
-      card.className = 'post-card';
-      card.innerHTML = `
-        <div class="post-category">${p.cat}</div>
-        <h2>${p.title}</h2>
-        <p>${p.desc}</p>
-        <div class="post-meta">
-          <span>${p.date}</span>
-          <span class="post-card-affiliate">Read Review →</span>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-  </script>
+<!-- ===== LATEST REVIEWS ===== -->
+<section class="section-poster" id="reviews">
+  <div class="bg-text" aria-hidden="true">REVIEWS</div>
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <p class="section-label">Latest</p>
+      <h2>LATEST REVIEWS</h2>
+    </div>
+    <div class="posts-grid" id="posts-grid">
+      <!-- posts loaded here -->
+    </div>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <p>AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links &mdash; no extra cost to you.</p>
-    <p style="margin-top:8px"><a href="/about.html">About</a></p>
-  </footer>
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter-section">
+  <div class="bg-text" aria-hidden="true">UPDATE</div>
+  <div class="newsletter-inner reveal">
+    <h3>STAY IN THE LOOP</h3>
+    <p>New reviews go out weekly. No spam — just honest takes on the tools shaping AI.</p>
+    <form class="newsletter-form" action="#" onsubmit="return false;">
+      <input type="email" placeholder="your@email.com" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="checkered">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
+    <ul class="footer-links">
+      <li><a href="#hero">Top</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+  <p class="footer-copy">&copy; 2026 AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links &mdash; no extra cost to you.</p>
+</footer>
+
+<script>
+// ===== POSTS DATA =====
+const posts = [
+  {
+    title: "Claude Review: Best AI for Long-Context Reasoning in 2025",
+    desc: "Hands-on testing Claude's sonnet-4, artifact sharing, and where it beats ChatGPT for deep work.",
+    cat: "LLMs / Chatbots",
+    emoji: "🧠",
+    date: "May 2025",
+    slug: "claude-review",
+    tags: ["AI Chatbots", "LLMs"]
+  },
+  {
+    title: "Cursor Review: The AI-First IDE That Changed How I Code",
+    desc: "Is Cursor worth the hype? Testing agentic refactoring, tab autocomplete, and real-world PR workflows.",
+    cat: "Coding Tools",
+    emoji: "⚡",
+    date: "May 2025",
+    slug: "cursor-review",
+    tags: ["AI Coding", "IDE"]
+  },
+  {
+    title: "Perplexity Review: AI Search Engine Deep Dive",
+    desc: "Can Perplexity replace Google? Testing pro search, deep research, and where it falls short.",
+    cat: "Search / Research",
+    emoji: "🔍",
+    date: "May 2025",
+    slug: "perplexity-review",
+    tags: ["AI Search", "Research"]
+  },
+  {
+    title: "Bolt.new Review: Generate Full-Stack Apps From a Prompt",
+    desc: "Testing Bolt.new's ability to generate, deploy, and iterate on production-ready web apps.",
+    cat: "Coding Tools",
+    emoji: "⚡",
+    date: "May 2025",
+    slug: "bolt-review",
+    tags: ["AI Coding", "Web Apps"]
+  }
+];
+
+const iconMap = { "🧠": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z", "⚡": "M13 2L3 14h9l-1 8 10-12h-9l1-8z", "🔍": "M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" };
+const catGrads = [
+  "linear-gradient(180deg,rgba(139,0,255,.15),transparent)",
+  "linear-gradient(180deg,rgba(139,0,255,.1),transparent)",
+  "linear-gradient(180deg,rgba(179,0,255,.12),transparent)",
+  "linear-gradient(180deg,rgba(199,125,255,.1),transparent)"
+];
+
+const grid = document.getElementById('posts-grid');
+posts.forEach((p, i) => {
+  const card = document.createElement('a');
+  card.href = `/posts/${p.slug}.html`;
+  card.className = 'post-card';
+  const grad = catGrads[i % catGrads.length];
+  card.innerHTML = `
+    <div class="pc-top" style="background:${grad}">
+      <div class="pc-glow"></div>
+      <div class="pc-category">${p.cat}</div>
+      <div class="pc-icon">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="${iconMap[p.emoji] || iconMap['🧠']}" fill="#c77dff" opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+    <div class="pc-bot">
+      <h2>${p.title}</h2>
+      <p>${p.desc}</p>
+      <div class="pc-meta">
+        <span>${p.date}</span>
+        <span class="read-link">Read Review →</span>
+      </div>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+// ===== SPEED LINES =====
+(function(){
+  const c=document.getElementById('speedLines');
+  for(let i=0;i=6;i++){
+    const l=document.createElement('div');l.className='speed-line';
+    l.style.setProperty('--t',Math.random()*100+'%');
+    l.style.setProperty('--w',(150+Math.random()*250)+'px');
+    l.style.setProperty('--d',(3+Math.random()*5)+'s');
+    l.style.setProperty('--dl',(Math.random()*10)+'s');
+    c.appendChild(l);
+  }
+})();
+
+// ===== FLUID BLOB BG =====
+const blobEls = [document.getElementById('b0'),document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3')];
+const palette=[[30,0,50],[100,0,180],[150,0,255],[199,125,255],[100,0,180],[20,0,40]],palPos=[0,.2,.4,.6,.8,1];
+function lerpC(t){t=((t%1)+1)%1;for(let i=0;i<palPos.length-1;i++){if(t>=palPos[i]&&t<=palPos[i+1]){const f=(t-palPos[i])/(palPos[i+1]-palPos[i]);return[Math.round(palette[i][0]+(palette[i+1][0]-palette[i][0])*f),Math.round(palette[i][1]+(palette[i+1][1]-palette[i][1])*f),Math.round(palette[i][2]+(palette[i+1][2]-palette[i][2])*f)]}}return palette[palette.length-1]}
+const blobData=[
+  {phase:0,ox:.35,oy:.18,op:.7,os:.6},
+  {phase:.25,ox:.65,oy:.5,op:.3,os:.5},
+  {phase:.5,ox:.2,oy:.75,op:.5,os:.45},
+  {phase:.75,ox:.55,oy:.82,op:.4,os:.55},
+];
+function updateFluid(){
+  const vh=window.innerHeight,vw=window.innerWidth;
+  const docH=Math.max(1,document.documentElement.scrollHeight-vh);
+  const progress=Math.min(1,Math.max(0,window.scrollY/docH));
+  const idle=Date.now()/6000;
+  blobData.forEach((bd,i)=>{
+    const e=blobEls[i];if(!e)return;
+    const p=((progress+bd.phase+idle*.08)%1+1)%1;
+    const a=p*Math.PI*2+i*1.3,a2=p*Math.PI*1.7+i*.9;
+    let x,y,sx,sy;
+    switch(i){
+      case 0:x=bd.ox+.55*(.5+.5*Math.sin(a));y=bd.oy+.35*(.5+.5*Math.sin(a2));sx=bd.os+.15*Math.sin(a*.7);sy=bd.os*.8+.1*Math.cos(a*.5);break;
+      case 1:x=bd.ox+.25*(.5+.5*Math.cos(a*.8));y=bd.oy+.35*(.5+.5*Math.sin(a2*.9));sx=bd.os+.2*Math.cos(a*.6);sy=bd.os*.75+.15*Math.sin(a*.4);break;
+      case 2:x=bd.ox+.6*(.5+.5*Math.cos(a*.6));y=bd.oy+.2*(.5+.5*Math.sin(a*.7));sx=bd.os+.2*Math.sin(a*.5);sy=bd.os+.15*Math.cos(a*.3);break;
+      default:x=bd.ox+.45*(.5+.5*Math.sin(a*.9));y=bd.oy+.25*(.5+.5*Math.cos(a2*.8));sx=bd.os+.15*Math.cos(a*.4);sy=bd.os*.7+.15*Math.sin(a*.6);break;
+    }
+    const c=lerpC(p+.12*Math.sin(idle+i));
+    e.style.left=(x*100)+'%';e.style.top=(y*100)+'%';
+    e.style.width=(sx*100)+'vw';e.style.height=(sy*100)+'vh';
+    e.style.transform='translate(-50%,-50%)';
+    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.28) 0%, rgba(${c[0]},${c[1]},${c[2]},.12) 40%, transparent 65%)`;
+  });
+}
+function rafFluid(){updateFluid();requestAnimationFrame(rafFluid)}
+rafFluid();
+
+// ===== NAV HIDE/SHOW =====
+let ls=0;
+const n=document.querySelector('.site-header');
+window.addEventListener('scroll',()=>{
+  const cw=window.scrollY;
+  n.classList.toggle('hidden',cw>ls&&cw>80);
+  ls=cw;
+},{passive:true});
+
+// ===== SCROLL REVEAL =====
+const obs=new IntersectionObserver(e=>{
+  e.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
 </body>
 </html>

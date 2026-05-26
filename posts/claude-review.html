@@ -1,125 +1,184 @@
-<!doctype html>
-<html lang="en">
-<head>
+     1|<!doctype html>
+     2|<html lang="en">
+     3|<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claude Review (2025) — Best AI for Long-Context Reasoning? | AI Tools Review</title>
-  <meta name="description" content="Hands-on testing Claude by Anthropic. We compare sonnet-4, artifacts, projects, and where it beats ChatGPT for serious work." />
+  <title>REPLACE_TITLE | AI Tools Review</title>
+  <meta name="description" content="" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">AI Tools <span>Review</span></a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <article class="post-page">
-    <a href="/" class="back-link">← Back to reviews</a>
-    <h1>Claude Review: Best AI for Long-Context Reasoning in 2025</h1>
-    <p class="post-subtitle">Hands-on testing Claude's latest models, artifacts, projects mode, and where it genuinely beats the competition.</p>
-    <div class="post-header-meta">
-      <span>📅 May 2025</span>
-      <span>📁 LLMs / Chatbots</span>
-      <span>⏱ 6 min read</span>
-    </div>
-
-    <p><strong>Verdict upfront:</strong> Claude is the best AI for deep, context-heavy work — coding across large codebases, analysing long documents, and complex reasoning. It's not the best at everything, but for serious knowledge work it leads the pack.</p>
-
-    <div class="verdict-box">
-      <h3>⭐ TL;DR</h3>
-      <p><strong>Best for:</strong> Coding, long-document analysis, research, complex reasoning tasks.<br>
-      <strong>Weak at:</strong> Real-time web search, multimodal editing, free tier is limited.<br>
-      <strong>Price:</strong> Free tier available. Pro $20/mo (claude-sonnet-4). Team $25/user/mo. Enterprise custom.</p>
-      <a class="affiliate-button" href="https://claude.ai" target="_blank" rel="noopener">Try Claude Free →</a>
-      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
-    </div>
-
-    <h2>What Is Claude?</h2>
-    <p>Claude is Anthropic's family of large language models. The current flagship is <strong>claude-sonnet-4</strong>, positioning between speed and capability. There's also <strong>claude-opus-4</strong> for max reasoning and <strong>claude-haiku-4</strong> for cheap, fast tasks.</p>
-    <p>Key features that set it apart: 200K token context window (~150,000 words), artifact sharing, projects with custom instructions, and enterprise-grade safety alignment through constitutional AI.</p>
-
-    <h2>What I Tested</h2>
-    <p>I used Claude daily for two weeks across three areas:</p>
-    <ul>
-      <li><strong>Coding:</strong> Full-stack web app generation, debugging a production Node.js service, refactoring a 2000-line Python script</li>
-      <li><strong>Writing & Analysis:</strong> Summarising 80-page PDFs, drafting technical documentation, competitive analysis reports</li>
-      <li><strong>Research:</strong> Multi-step research tasks with iterative refinement</li>
+    13|<body>
+<div id="fluid-bg" aria-hidden="true">
+  <div class="blob" id="b0"></div>
+  <div class="blob" id="b1"></div>
+  <div class="blob" id="b2"></div>
+  <div class="blob" id="b3"></div>
+</div>
+    14|  <header class="site-header" id="siteHeader">
+  <a href="/" class="logo">AI TOOLS <span>REVIEW</span></a>
+  <nav>
+    <a href="/about.html">About</a>
+    <a href="/">Reviews</a>
+  </nav>
+</header>
+    23|
+    24|  <article class="post-page">
+    25|    <a href="/" class="back-link">← Back to reviews</a>
+    26|    <h1>Claude Review: Best AI for Long-Context Reasoning in 2025</h1>
+    27|    <p class="post-subtitle">Hands-on testing Claude's latest models, artifacts, projects mode, and where it genuinely beats the competition.</p>
+    28|    <div class="post-header-meta">
+    29|      <span>May 2025</span>
+    30|      <span>LLMs / Chatbots</span>
+    31|      <span>6 min read</span>
+    32|    </div>
+    33|
+    34|    <p><strong>Verdict upfront:</strong> Claude is the best AI for deep, context-heavy work — coding across large codebases, analysing long documents, and complex reasoning. It's not the best at everything, but for serious knowledge work it leads the pack.</p>
+    35|
+    36|    <div class="verdict-box">
+    37|      <h3>⭐ TL;DR</h3>
+    38|      <p><strong>Best for:</strong> Coding, long-document analysis, research, complex reasoning tasks.<br>
+    39|      <strong>Weak at:</strong> Real-time web search, multimodal editing, free tier is limited.<br>
+    40|      <strong>Price:</strong> Free tier available. Pro $20/mo (claude-sonnet-4). Team $25/user/mo. Enterprise custom.</p>
+    41|      <a class="affiliate-button" href="https://claude.ai" target="_blank" rel="noopener">Try Claude Free →</a>
+    42|      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    43|    </div>
+    44|
+    45|    <h2>What Is Claude?</h2>
+    46|    <p>Claude is Anthropic's family of large language models. The current flagship is <strong>claude-sonnet-4</strong>, positioning between speed and capability. There's also <strong>claude-opus-4</strong> for max reasoning and <strong>claude-haiku-4</strong> for cheap, fast tasks.</p>
+    47|    <p>Key features that set it apart: 200K token context window (~150,000 words), artifact sharing, projects with custom instructions, and enterprise-grade safety alignment through constitutional AI.</p>
+    48|
+    49|    <h2>What I Tested</h2>
+    50|    <p>I used Claude daily for two weeks across three areas:</p>
+    51|    <ul>
+    52|      <li><strong>Coding:</strong> Full-stack web app generation, debugging a production Node.js service, refactoring a 2000-line Python script</li>
+    53|      <li><strong>Writing & Analysis:</strong> Summarising 80-page PDFs, drafting technical documentation, competitive analysis reports</li>
+    54|      <li><strong>Research:</strong> Multi-step research tasks with iterative refinement</li>
+    55|    </ul>
+    56|
+    57|    <h2>Performance Breakdown</h2>
+    58|
+    59|    <h3>1. Coding ★★★★★</h3>
+    60|    <p>Claude sonnet-4 is genuinely impressive at coding. It generated a working Express.js API with auth middleware, database schema, and test suite from a single prompt. The key advantage over ChatGPT-4o is <strong>consistency across long conversations</strong> — it doesn't forget context after 20 messages.</p>
+    61|    <p>It also handles refactoring well. I threw a messy Python scraper at it and it restructured it into clean, documented modules without breaking anything. The code output is well-structured, uses current best practices, and rarely hallucinates API calls.</p>
+    62|
+    63|    <h3>2. Long-Context Reasoning ★★★★★</h3>
+    64|    <p>The 200K token context window isn't just marketing — it genuinely works. I pasted an entire 80-page PDF (through the file upload) and asked Claude to extract key arguments, find contradictions, and summarise by chapter. It handled this perfectly, even referencing specific page numbers.</p>
+    65|    <p>This is where Claude clearly beats competitors. ChatGPT starts losing track after 20-30 pages. Claude stays sharp the whole way through.</p>
+    66|
+    67|    <h3>3. Artifacts & Projects ★★★★☆</h3>
+    68|    <p>Artifacts let Claude share generated content (code, documents, diagrams) in a right-side panel. It's great for iterating — you can suggest changes and Claude updates the artifact in place without losing the conversation context.</p>
+    69|    <p>Projects mode lets you create dedicated workspaces with custom instructions, knowledge documents, and pinned context. Excellent for recurring work like weekly reports or ongoing development.</p>
+    70|
+    71|    <h3>4. Web Search & Real-Time Info ★★☆☆☆</h3>
+    72|    <p>Claude's web search is functional but not great. It's slower than ChatGPT's browsing, sometimes returns stale results, and doesn't handle multi-source verification well. For real-time research, use Perplexity or ChatGPT instead.</p>
+    73|
+    74|    <div class="pros-cons">
+    75|      <div class="pros-box">
+    76|        <h3>✅ Pros</h3>
+    77|        <ul>
+    78|          <li>Best-in-class long-context reasoning</li>
+    79|          <li>Excellent code generation and refactoring</li>
+    80|          <li>Artifact system is great for iteration</li>
+    81|          <li>Projects mode for recurring work</li>
+    82|          <li>Good safety alignment out of the box</li>
+    83|        </ul>
+    84|      </div>
+    85|      <div class="cons-box">
+    86|        <h3>❌ Cons</h3>
+    87|        <ul>
+    88|          <li>Web search is weak and slow</li>
+    89|          <li>Free tier is quite limited</li>
+    90|          <li>No native image generation (uses third-party)</li>
+    91|          <li>Can be overly cautious on some prompts</li>
+    92|          <li>No mobile app (web-only)</li>
+    93|        </ul>
+    94|      </div>
+    95|    </div>
+    96|
+    97|    <h2>Pricing</h2>
+    98|    <ul>
+    99|      <li><strong>Free:</strong> Limited access to claude-haiku-4 and older models</li>
+   100|      <li><strong>Pro ($20/mo):</strong> Full access to claude-sonnet-4, higher rate limits, artifacts</li>
+   101|      <li><strong>Team ($25/user/mo):</strong> Everything in Pro + higher limits, admin controls</li>
+   102|      <li><strong>Enterprise:</strong> Custom pricing, dedicated support, SSO</li>
+   103|    </ul>
+   104|
+   105|    <h2>Alternatives</h2>
+   106|    <ul>
+   107|      <li><strong>ChatGPT</strong> — Better web search, multimodal (vision, DALL-E), broader feature set</li>
+   108|      <li><strong>Gemini</strong> — Free tier is very generous, strong multimodal understanding</li>
+   109|      <li><strong>DeepSeek</strong> — Cheap and open-weight, good for budget-conscious users</li>
+   110|    </ul>
+   111|
+   112|    <div class="verdict-box">
+   113|      <h3>🏆 Final Verdict: 8.5/10</h3>
+   114|      <p>Claude is the best tool for deep knowledge work. If you need to analyse long documents, write complex code, or maintain context across a long session, it's unmatched. For quick web searches, simple Q&A, or creative writing, other tools may serve you better.</p>
+   115|      <a class="affiliate-button" href="https://claude.ai" target="_blank" rel="noopener">Try Claude Free →</a>
+   116|      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+   117|    </div>
+   118|  </article>
+   119|
+   120|  <footer class="site-footer">
+  <div class="checkered">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Reviews</a></li>
+      <li><a href="/about.html">About</a></li>
     </ul>
-
-    <h2>Performance Breakdown</h2>
-
-    <h3>1. Coding ★★★★★</h3>
-    <p>Claude sonnet-4 is genuinely impressive at coding. It generated a working Express.js API with auth middleware, database schema, and test suite from a single prompt. The key advantage over ChatGPT-4o is <strong>consistency across long conversations</strong> — it doesn't forget context after 20 messages.</p>
-    <p>It also handles refactoring well. I threw a messy Python scraper at it and it restructured it into clean, documented modules without breaking anything. The code output is well-structured, uses current best practices, and rarely hallucinates API calls.</p>
-
-    <h3>2. Long-Context Reasoning ★★★★★</h3>
-    <p>The 200K token context window isn't just marketing — it genuinely works. I pasted an entire 80-page PDF (through the file upload) and asked Claude to extract key arguments, find contradictions, and summarise by chapter. It handled this perfectly, even referencing specific page numbers.</p>
-    <p>This is where Claude clearly beats competitors. ChatGPT starts losing track after 20-30 pages. Claude stays sharp the whole way through.</p>
-
-    <h3>3. Artifacts & Projects ★★★★☆</h3>
-    <p>Artifacts let Claude share generated content (code, documents, diagrams) in a right-side panel. It's great for iterating — you can suggest changes and Claude updates the artifact in place without losing the conversation context.</p>
-    <p>Projects mode lets you create dedicated workspaces with custom instructions, knowledge documents, and pinned context. Excellent for recurring work like weekly reports or ongoing development.</p>
-
-    <h3>4. Web Search & Real-Time Info ★★☆☆☆</h3>
-    <p>Claude's web search is functional but not great. It's slower than ChatGPT's browsing, sometimes returns stale results, and doesn't handle multi-source verification well. For real-time research, use Perplexity or ChatGPT instead.</p>
-
-    <div class="pros-cons">
-      <div class="pros-box">
-        <h3>✅ Pros</h3>
-        <ul>
-          <li>Best-in-class long-context reasoning</li>
-          <li>Excellent code generation and refactoring</li>
-          <li>Artifact system is great for iteration</li>
-          <li>Projects mode for recurring work</li>
-          <li>Good safety alignment out of the box</li>
-        </ul>
-      </div>
-      <div class="cons-box">
-        <h3>❌ Cons</h3>
-        <ul>
-          <li>Web search is weak and slow</li>
-          <li>Free tier is quite limited</li>
-          <li>No native image generation (uses third-party)</li>
-          <li>Can be overly cautious on some prompts</li>
-          <li>No mobile app (web-only)</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Pricing</h2>
-    <ul>
-      <li><strong>Free:</strong> Limited access to claude-haiku-4 and older models</li>
-      <li><strong>Pro ($20/mo):</strong> Full access to claude-sonnet-4, higher rate limits, artifacts</li>
-      <li><strong>Team ($25/user/mo):</strong> Everything in Pro + higher limits, admin controls</li>
-      <li><strong>Enterprise:</strong> Custom pricing, dedicated support, SSO</li>
-    </ul>
-
-    <h2>Alternatives</h2>
-    <ul>
-      <li><strong>ChatGPT</strong> — Better web search, multimodal (vision, DALL-E), broader feature set</li>
-      <li><strong>Gemini</strong> — Free tier is very generous, strong multimodal understanding</li>
-      <li><strong>DeepSeek</strong> — Cheap and open-weight, good for budget-conscious users</li>
-    </ul>
-
-    <div class="verdict-box">
-      <h3>🏆 Final Verdict: 8.5/10</h3>
-      <p>Claude is the best tool for deep knowledge work. If you need to analyse long documents, write complex code, or maintain context across a long session, it's unmatched. For quick web searches, simple Q&A, or creative writing, other tools may serve you better.</p>
-      <a class="affiliate-button" href="https://claude.ai" target="_blank" rel="noopener">Try Claude Free →</a>
-      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
-    </div>
-  </article>
-
-  <footer class="site-footer">
-    <p>AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links.</p>
-    <p style="margin-top:8px"><a href="/">Home</a> · <a href="/about.html">About</a></p>
-  </footer>
+  </div>
+  <p class="footer-copy">&copy; 2026 AI Tools Review &mdash; honest, hands-on reviews.</p>
+</footer>
+   124|
+<script>
+const blobEls = [document.getElementById('b0'),document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3')];
+const palette=[[30,0,50],[100,0,180],[150,0,255],[199,125,255],[100,0,180],[20,0,40]],palPos=[0,.2,.4,.6,.8,1];
+function lerpC(t){t=((t%1)+1)%1;for(let i=0;i<palPos.length-1;i++){if(t>=palPos[i]&&t<=palPos[i+1]){const f=(t-palPos[i])/(palPos[i+1]-palPos[i]);return[Math.round(palette[i][0]+(palette[i+1][0]-palette[i][0])*f),Math.round(palette[i][1]+(palette[i+1][1]-palette[i][1])*f),Math.round(palette[i][2]+(palette[i+1][2]-palette[i][2])*f)]}}return palette[palette.length-1]}
+const blobData=[
+  {phase:0,ox:.35,oy:.18,op:.7,os:.6},{phase:.25,ox:.65,oy:.5,op:.3,os:.5},
+  {phase:.5,ox:.2,oy:.75,op:.5,os:.45},{phase:.75,ox:.55,oy:.82,op:.4,os:.55}
+];
+function updateFluid(){
+  const vh=window.innerHeight,vw=window.innerWidth;
+  const docH=Math.max(1,document.documentElement.scrollHeight-vh);
+  const progress=Math.min(1,Math.max(0,window.scrollY/docH));
+  const idle=Date.now()/6000;
+  blobData.forEach((bd,i)=>{
+    const e=blobEls[i];if(!e)return;
+    const p=((progress+bd.phase+idle*.08)%1+1)%1;
+    const a=p*Math.PI*2+i*1.3,a2=p*Math.PI*1.7+i*.9;
+    let x,y,sx,sy;
+    switch(i){
+      case 0:x=bd.ox+.55*(.5+.5*Math.sin(a));y=bd.oy+.35*(.5+.5*Math.sin(a2));sx=bd.os+.15*Math.sin(a*.7);sy=bd.os*.8+.1*Math.cos(a*.5);break;
+      case 1:x=bd.ox+.25*(.5+.5*Math.cos(a*.8));y=bd.oy+.35*(.5+.5*Math.sin(a2*.9));sx=bd.os+.2*Math.cos(a*.6);sy=bd.os*.75+.15*Math.sin(a*.4);break;
+      case 2:x=bd.ox+.6*(.5+.5*Math.cos(a*.6));y=bd.oy+.2*(.5+.5*Math.sin(a*.7));sx=bd.os+.2*Math.sin(a*.5);sy=bd.os+.15*Math.cos(a*.3);break;
+      default:x=bd.ox+.45*(.5+.5*Math.sin(a*.9));y=bd.oy+.25*(.5+.5*Math.cos(a2*.8));sx=bd.os+.15*Math.cos(a*.4);sy=bd.os*.7+.15*Math.sin(a*.6);break;
+    }
+    const c=lerpC(p+.12*Math.sin(idle+i));
+    e.style.left=(x*100)+'%';e.style.top=(y*100)+'%';
+    e.style.width=(sx*100)+'vw';e.style.height=(sy*100)+'vh';
+    e.style.transform='translate(-50%,-50%)';
+    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.28) 0%, rgba(${c[0]},${c[1]},${c[2]},.12) 40%, transparent 65%)`;
+  });
+}
+function rafFluid(){updateFluid();requestAnimationFrame(rafFluid)}
+rafFluid();
+let ls=0;
+const n=document.querySelector('.site-header');
+window.addEventListener('scroll',()=>{const cw=window.scrollY;n.classList.toggle('hidden',cw>ls&&cw>80);ls=cw;},{passive:true});
+</script>
 </body>
-</html>
+   125|</html>
