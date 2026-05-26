@@ -30,4 +30,5 @@ git commit -m "$MSG"
 git push origin main
 
 echo "✓ Deployed! Wait ~2 min for GitHub Pages to update."
-echo "  Your site: https://aitoolsreview.site"
+echo "  Your site: https://invictusnx.github.io/ai-tools-review/"
+echo "  (aitoolsreview.site is owned by someone else — not available)"

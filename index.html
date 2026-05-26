@@ -12,6 +12,12 @@
 </head>
 <body>
 
+<!-- ===== NOISE OVERLAY ===== -->
+<div id="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div id="cursor-glow" aria-hidden="true"></div>
+
 <!-- ===== FLUID BLOB BG ===== -->
 <div id="fluid-bg" aria-hidden="true">
   <div class="blob" id="b0"></div>
@@ -20,65 +26,128 @@
   <div class="blob" id="b3"></div>
 </div>
 
-<!-- ===== SPEED LINES ===== -->
-<div class="speed-lines" id="speedLines" aria-hidden="true"></div>
+<!-- ===== GRID BG ===== -->
+<div id="grid-bg" aria-hidden="true"></div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="siteHeader">
-  <a href="." class="logo">AI TOOLS <span>REVIEW</span></a>
-  <nav>
+  <a href="." class="logo">
+    <span class="logo-dot"></span>
+    AI TOOLS <span>REVIEW</span>
+  </a>
+  <div class="header-right">
     <a href="about.html">About</a>
-  </nav>
+    <a href="#reviews" class="header-cta">Reviews</a>
+  </div>
 </header>
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
+  <!-- Orbital rings -->
+  <div class="hero-orbitals" aria-hidden="true">
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+  </div>
+
   <div class="bg-num" aria-hidden="true">AI</div>
 
-  <div class="hero-badge"><span class="dot"></span>Honest Reviews Since 2025</div>
+  <div class="hero-badge reveal"><span class="dot"></span>Honest Reviews Since 2025</div>
 
-  <h1>AI TOOLS<br>REVIEW</h1>
+  <h1 class="reveal">AI TOOLS<br>REVIEW</h1>
 
-  <p class="hero-sub">Tested · Rated · Explained</p>
-  <div class="hero-divider"></div>
-  <p class="hero-tagline">Hands-on, no-fluff reviews of the AI tools actually worth using. Every tool gets real testing before it gets a verdict.</p>
+  <p class="hero-sub reveal">Tested · Rated · Explained</p>
+  <div class="hero-divider reveal"></div>
+  <p class="hero-tagline reveal">Hands-on, no-fluff reviews of the AI tools actually worth using. Every tool gets real testing before it gets a verdict.</p>
 
-  <div class="hero-stats">
+  <div class="hero-stats reveal">
     <div class="hero-stat"><div class="hs-num">20+</div><div class="hs-label">Tools Reviewed</div></div>
     <div class="hero-stat"><div class="hs-num">Weekly</div><div class="hs-label">New Posts</div></div>
     <div class="hero-stat"><div class="hs-num">100%</div><div class="hs-label">Hands-On Testing</div></div>
   </div>
 
   <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
-  <div class="hero-stripes">
-    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
-    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
-    <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
-  </div>
 </section>
 
+<!-- ===== TRENDING TICKER ===== -->
+<div class="ticker-section">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- Duplicated for seamless scroll -->
+    <div class="ticker-item"><span class="t-dot"></span>Claude 4 Sonnet Reviewed</div>
+    <div class="ticker-item"><span class="t-dot"></span>Cursor AI IDE Deep Dive</div>
+    <div class="ticker-item"><span class="t-dot"></span>Perplexity Search Tested</div>
+    <div class="ticker-item"><span class="t-dot"></span>Bolt.new App Generation</div>
+    <div class="ticker-item"><span class="t-dot"></span>New: AI Coding Showdown</div>
+    <div class="ticker-item"><span class="t-dot"></span>ChatGPT vs Claude Compared</div>
+    <div class="ticker-item"><span class="t-dot"></span>Weekly Picks — Best AI Tools</div>
+    <!-- Second copy for seamless loop -->
+    <div class="ticker-item"><span class="t-dot"></span>Claude 4 Sonnet Reviewed</div>
+    <div class="ticker-item"><span class="t-dot"></span>Cursor AI IDE Deep Dive</div>
+    <div class="ticker-item"><span class="t-dot"></span>Perplexity Search Tested</div>
+    <div class="ticker-item"><span class="t-dot"></span>Bolt.new App Generation</div>
+    <div class="ticker-item"><span class="t-dot"></span>New: AI Coding Showdown</div>
+    <div class="ticker-item"><span class="t-dot"></span>ChatGPT vs Claude Compared</div>
+    <div class="ticker-item"><span class="t-dot"></span>Weekly Picks — Best AI Tools</div>
+  </div>
+</div>
+
 <!-- ===== LATEST REVIEWS ===== -->
-<section class="section-poster" id="reviews">
-  <div class="bg-text" aria-hidden="true">REVIEWS</div>
+<section class="section" id="reviews">
   <div class="section-inner">
     <div class="section-head reveal">
-      <p class="section-label">Latest</p>
-      <h2>LATEST REVIEWS</h2>
+      <div>
+        <p class="section-label">Latest</p>
+        <h2>LATEST REVIEWS</h2>
+      </div>
+      <a href="about.html" class="sh-link">All Reviews →</a>
     </div>
+
+    <!-- Category filter -->
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="LLMs / Chatbots">Chatbots</button>
+      <button class="filter-btn" data-filter="Coding Tools">Coding</button>
+      <button class="filter-btn" data-filter="Search / Research">Search</button>
+    </div>
+
     <div class="posts-grid" id="posts-grid">
       <!-- posts loaded here -->
     </div>
   </div>
 </section>
 
+<!-- ===== SPOTLIGHT ===== -->
+<section class="spotlight-section">
+  <div class="spotlight-inner reveal">
+    <div class="spotlight-card">
+      <div class="spotlight-visual">
+        <span class="s-icon">🧠</span>
+        <div class="s-rating" id="spotlightStars"></div>
+        <div class="s-stats">
+          <div class="s-stat"><strong>4.8</strong> Rating</div>
+          <div class="s-stat"><strong>200K+</strong> Users</div>
+          <div class="s-stat"><strong>Best For</strong> Reasoning</div>
+        </div>
+      </div>
+      <div class="spotlight-content">
+        <p class="s-label">★ Editor's Pick</p>
+        <h3>Claude 4 Sonnet — The Reasoning King</h3>
+        <p>After weeks of real-world testing across coding, analysis, and creative writing, Claude 4 Sonnet stands out as the most capable model for deep, nuanced work. Long-context handling that actually works.</p>
+        <a href="posts/claude-review.html" class="s-cta">Read Full Review →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== NEWSLETTER ===== -->
 <section class="newsletter-section">
-  <div class="bg-text" aria-hidden="true">UPDATE</div>
   <div class="newsletter-inner reveal">
     <h3>STAY IN THE LOOP</h3>
     <p>New reviews go out weekly. No spam — just honest takes on the tools shaping AI.</p>
     <form class="newsletter-form" action="#" onsubmit="return false;">
-      <input type="email" placeholder="your@email.com" />
+      <div class="nf-wrap">
+        <input type="email" placeholder="your@email.com" />
+      </div>
       <button type="submit">Subscribe</button>
     </form>
   </div>
@@ -95,16 +164,35 @@
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
   <div class="footer-inner">
-    <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
-    <ul class="footer-links">
-      <li><a href="#hero">Top</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
+    <div class="footer-brand-col">
+      <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
+      <p>Honest, hands-on reviews of the AI tools actually worth using. Every tool tested before it gets a verdict.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#hero">Top</a>
+      <a href="#reviews">Reviews</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="#reviews">Chatbots & LLMs</a>
+      <a href="#reviews">Coding Tools</a>
+      <a href="#reviews">Search & Research</a>
+    </div>
   </div>
-  <p class="footer-copy">&copy; 2026 AI Tools Review &mdash; honest, hands-on reviews. Some links are affiliate links &mdash; no extra cost to you.</p>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AI Tools Review — honest, hands-on reviews. Some links are affiliate links — no extra cost to you.</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="X / Twitter">𝕏</a>
+      <a href="#" aria-label="GitHub">GH</a>
+      <a href="#" aria-label="RSS">RSS</a>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -117,7 +205,9 @@ const posts = [
     emoji: "🧠",
     date: "May 2025",
     slug: "claude-review",
-    tags: ["AI Chatbots", "LLMs"]
+    rating: 5,
+    tags: ["AI Chatbots", "LLMs"],
+    featured: true
   },
   {
     title: "Cursor Review: The AI-First IDE That Changed How I Code",
@@ -126,7 +216,9 @@ const posts = [
     emoji: "⚡",
     date: "May 2025",
     slug: "cursor-review",
-    tags: ["AI Coding", "IDE"]
+    rating: 4,
+    tags: ["AI Coding", "IDE"],
+    featured: false
   },
   {
     title: "Perplexity Review: AI Search Engine Deep Dive",
@@ -135,7 +227,9 @@ const posts = [
     emoji: "🔍",
     date: "May 2025",
     slug: "perplexity-review",
-    tags: ["AI Search", "Research"]
+    rating: 4,
+    tags: ["AI Search", "Research"],
+    featured: false
   },
   {
     title: "Bolt.new Review: Generate Full-Stack Apps From a Prompt",
@@ -144,57 +238,123 @@ const posts = [
     emoji: "⚡",
     date: "May 2025",
     slug: "bolt-review",
-    tags: ["AI Coding", "Web Apps"]
+    rating: 4,
+    tags: ["AI Coding", "Web Apps"],
+    featured: false
   }
 ];
 
-const iconMap = { "🧠": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z", "⚡": "M13 2L3 14h9l-1 8 10-12h-9l1-8z", "🔍": "M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" };
-const catGrads = [
-  "linear-gradient(180deg,rgba(139,0,255,.15),transparent)",
-  "linear-gradient(180deg,rgba(139,0,255,.1),transparent)",
-  "linear-gradient(180deg,rgba(179,0,255,.12),transparent)",
-  "linear-gradient(180deg,rgba(199,125,255,.1),transparent)"
-];
+// ===== STAR SVG =====
+const starSvg = '<svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.23l-4.77 2.51.91-5.33L2.27 6.62l5.34-.78L10 1z"/></svg>';
 
+// ===== ICON MAP =====
+const iconMap = {
+  "🧠": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z",
+  "⚡": "M13 2L3 14h9l-1 8 10-12h-9l1-8z",
+  "🔍": "M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+};
+
+// ===== RENDER POSTS =====
 const grid = document.getElementById('posts-grid');
-posts.forEach((p, i) => {
-  const card = document.createElement('a');
-  card.href = `posts/${p.slug}.html`;
-  card.className = 'post-card';
-  const grad = catGrads[i % catGrads.length];
-  card.innerHTML = `
-    <div class="pc-top" style="background:${grad}">
-      <div class="pc-glow"></div>
-      <div class="pc-category">${p.cat}</div>
-      <div class="pc-icon">
-        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="${iconMap[p.emoji] || iconMap['🧠']}" fill="#c77dff" opacity=".6"/>
-        </svg>
+
+function renderPosts(filter) {
+  const filtered = filter === 'all' ? posts : posts.filter(p => p.cat === filter);
+  grid.innerHTML = '';
+  filtered.forEach((p, i) => {
+    const card = document.createElement('a');
+    card.href = `posts/${p.slug}.html`;
+    card.className = 'post-card';
+    card.dataset.cat = p.cat;
+    card.style.animationDelay = (i * 0.08) + 's';
+
+    // Star rating
+    let stars = '';
+    for (let s = 0; s < 5; s++) {
+      stars += s < p.rating ? starSvg : starSvg.replace('fill="' + (s < p.rating ? '#c77dff' : '') + '"', 'fill="#333"');
+    }
+    // Override fill for filled stars
+    stars = '';
+    for (let s = 0; s < 5; s++) {
+      if (s < p.rating) {
+        stars += '<svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.23l-4.77 2.51.91-5.33L2.27 6.62l5.34-.78L10 1z" fill="#c77dff"/></svg>';
+      } else {
+        stars += '<svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.23l-4.77 2.51.91-5.33L2.27 6.62l5.34-.78L10 1z" fill="#333"/></svg>';
+      }
+    }
+
+    // Particles
+    let particles = '';
+    for (let j = 0; j < 3; j++) {
+      const x = 20 + Math.random() * 60;
+      const y = 20 + Math.random() * 60;
+      const delay = Math.random() * 3;
+      particles += `<div class="pc-particle" style="left:${x}%;top:${y}%;animation-delay:${delay}s"></div>`;
+    }
+
+    const badge = p.featured ? '<div class="pc-badge show">Featured</div>' : '';
+
+    card.innerHTML = `
+      <div class="pc-top">
+        <div class="pc-glow"></div>
+        <div class="pc-particles">${particles}</div>
+        ${badge}
+        <div class="pc-category">${p.cat}</div>
+        <div class="pc-icon">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="${iconMap[p.emoji] || iconMap['🧠']}" fill="#c77dff" opacity=".6"/>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div class="pc-bot">
-      <h2>${p.title}</h2>
-      <p>${p.desc}</p>
-      <div class="pc-meta">
-        <span>${p.date}</span>
-        <span class="read-link">Read Review →</span>
+      <div class="pc-bot">
+        <h2>${p.title}</h2>
+        <p>${p.desc}</p>
+        <div class="pc-meta">
+          <div class="pc-rating">${stars}</div>
+          <span class="read-link">Read →</span>
+        </div>
       </div>
-    </div>
-  `;
-  grid.appendChild(card);
+    `;
+    grid.appendChild(card);
+  });
+}
+renderPosts('all');
+
+// ===== CATEGORY FILTER =====
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderPosts(btn.dataset.filter);
+  });
 });
 
-// ===== SPEED LINES =====
-(function(){
-  const c=document.getElementById('speedLines');
-  for(let i=0;i=6;i++){
-    const l=document.createElement('div');l.className='speed-line';
-    l.style.setProperty('--t',Math.random()*100+'%');
-    l.style.setProperty('--w',(150+Math.random()*250)+'px');
-    l.style.setProperty('--d',(3+Math.random()*5)+'s');
-    l.style.setProperty('--dl',(Math.random()*10)+'s');
-    c.appendChild(l);
+// ===== SPOTLIGHT STARS =====
+(function() {
+  const container = document.getElementById('spotlightStars');
+  if (container) {
+    for (let i = 0; i < 5; i++) {
+      const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      s.setAttribute('viewBox', '0 0 20 20');
+      s.setAttribute('width', '20');
+      s.setAttribute('height', '20');
+      s.classList.add('star');
+      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      p.setAttribute('d', 'M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.23l-4.77 2.51.91-5.33L2.27 6.62l5.34-.78L10 1z');
+      p.setAttribute('fill', i < 5 ? '#c77dff' : '#333');
+      s.appendChild(p);
+      container.appendChild(s);
+    }
   }
+})();
+
+// ===== CURSOR GLOW FOLLOW =====
+(function(){
+  const glow = document.getElementById('cursor-glow');
+  if (!glow) return;
+  document.addEventListener('mousemove', e => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
 })();
 
 // ===== FLUID BLOB BG =====
@@ -227,7 +387,7 @@ function updateFluid(){
     e.style.left=(x*100)+'%';e.style.top=(y*100)+'%';
     e.style.width=(sx*100)+'vw';e.style.height=(sy*100)+'vh';
     e.style.transform='translate(-50%,-50%)';
-    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.28) 0%, rgba(${c[0]},${c[1]},${c[2]},.12) 40%, transparent 65%)`;
+    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.25) 0%, rgba(${c[0]},${c[1]},${c[2]},.1) 40%, transparent 65%)`;
   });
 }
 function rafFluid(){updateFluid();requestAnimationFrame(rafFluid)}
@@ -247,7 +407,7 @@ const obs=new IntersectionObserver(e=>{
   e.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}
   });
-},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 
