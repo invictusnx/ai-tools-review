@@ -31,13 +31,13 @@
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="siteHeader">
-  <a href="." class="logo">
+  <a href="index.html" class="logo">
     <span class="logo-dot"></span>
     AI TOOLS <span>REVIEW</span>
   </a>
   <div class="header-right">
     <a href="about.html">About</a>
-    <a href="#reviews" class="header-cta">Reviews</a>
+    <a href="index.html#reviews" class="header-cta">Reviews</a>
   </div>
 </header>
 
@@ -58,12 +58,12 @@
 
   <p class="hero-sub reveal">Tested · Rated · Explained</p>
   <div class="hero-divider reveal"></div>
-  <p class="hero-tagline reveal">Hands-on, no-fluff reviews of the AI tools actually worth using. Every tool gets real testing before it gets a verdict.</p>
+  <p class="hero-tagline reveal">No-fluff reviews, pricing breakdowns, and quick links for the AI tools actually worth trying.</p>
 
   <div class="hero-stats reveal">
-    <div class="hero-stat"><div class="hs-num">20+</div><div class="hs-label">Tools Reviewed</div></div>
-    <div class="hero-stat"><div class="hs-num">Weekly</div><div class="hs-label">New Posts</div></div>
-    <div class="hero-stat"><div class="hs-num">100%</div><div class="hs-label">Hands-On Testing</div></div>
+    <div class="hero-stat"><div class="hs-num">13</div><div class="hs-label">Tools Reviewed</div></div>
+    <div class="hero-stat"><div class="hs-num">7</div><div class="hs-label">Affiliate-Ready Picks</div></div>
+    <div class="hero-stat"><div class="hs-num">Fast</div><div class="hs-label">Buying Decisions</div></div>
   </div>
 
   <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
@@ -91,6 +91,54 @@
   </div>
 </div>
 
+<!-- ===== TOP PICKS ===== -->
+<section class="top-picks-section" id="top-picks">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label">Start Here</p>
+        <h2>BEST AI TOOLS RIGHT NOW</h2>
+      </div>
+      <a href="index.html#reviews" class="sh-link">Compare all →</a>
+    </div>
+    <div class="top-picks-grid reveal">
+      <article class="pick-card pick-card-featured">
+        <div class="pick-rank">01</div>
+        <p class="pick-label">Best Overall</p>
+        <h3>Claude</h3>
+        <p>Best for long-context writing, coding help, analysis, and deep reasoning.</p>
+        <div class="pick-meta"><span>8.5/10</span><span>Free + $20/mo</span></div>
+        <div class="pick-actions">
+          <a href="posts/claude-review.html">Read Review</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">Try Tool →</a>
+        </div>
+      </article>
+      <article class="pick-card">
+        <div class="pick-rank">02</div>
+        <p class="pick-label">Best Coding Tool</p>
+        <h3>Cursor</h3>
+        <p>The strongest AI-first IDE for building, refactoring, and shipping faster.</p>
+        <div class="pick-meta"><span>8.0/10</span><span>Referral available</span></div>
+        <div class="pick-actions">
+          <a href="posts/cursor-review.html">Read Review</a>
+          <a href="https://cursor.com" target="_blank" rel="noopener">Try Tool →</a>
+        </div>
+      </article>
+      <article class="pick-card">
+        <div class="pick-rank">03</div>
+        <p class="pick-label">Best Automation</p>
+        <h3>n8n AI</h3>
+        <p>Build AI workflows, agents, scrapers, email automations, and integrations.</p>
+        <div class="pick-meta"><span>8.0/10</span><span>Affiliate program</span></div>
+        <div class="pick-actions">
+          <a href="posts/n8n-ai-review.html">Read Review</a>
+          <a href="https://n8n.io" target="_blank" rel="noopener">Try Tool →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ===== LATEST REVIEWS ===== -->
 <section class="section" id="reviews">
   <div class="section-inner">
@@ -108,6 +156,10 @@
       <button class="filter-btn" data-filter="LLMs / Chatbots">Chatbots</button>
       <button class="filter-btn" data-filter="Coding Tools">Coding</button>
       <button class="filter-btn" data-filter="Search / Research">Search</button>
+      <button class="filter-btn" data-filter="Agents / Autonomous">Agents</button>
+      <button class="filter-btn" data-filter="Productivity">Productivity</button>
+      <button class="filter-btn" data-filter="No-Code / Design">No-Code</button>
+      <button class="filter-btn" data-filter="Social / Marketing">Social</button>
     </div>
 
     <div class="posts-grid" id="posts-grid">
@@ -174,15 +226,15 @@
     </div>
     <div class="footer-col">
       <h4>Navigate</h4>
-      <a href="#hero">Top</a>
-      <a href="#reviews">Reviews</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#reviews">Reviews</a>
       <a href="about.html">About</a>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
-      <a href="#reviews">Chatbots & LLMs</a>
-      <a href="#reviews">Coding Tools</a>
-      <a href="#reviews">Search & Research</a>
+      <a href="index.html#reviews">Chatbots & LLMs</a>
+      <a href="index.html#reviews">Coding Tools</a>
+      <a href="index.html#reviews">Search & Research</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -207,7 +259,8 @@ const posts = [
     slug: "claude-review",
     rating: 5,
     tags: ["AI Chatbots", "LLMs"],
-    featured: true
+    featured: true,
+    affiliateUrl: "https://claude.ai"
   },
   {
     title: "Cursor Review: The AI-First IDE That Changed How I Code",
@@ -218,7 +271,8 @@ const posts = [
     slug: "cursor-review",
     rating: 4,
     tags: ["AI Coding", "IDE"],
-    featured: false
+    featured: false,
+    affiliateUrl: "https://cursor.com"
   },
   {
     title: "Perplexity Review: AI Search Engine Deep Dive",
@@ -229,7 +283,8 @@ const posts = [
     slug: "perplexity-review",
     rating: 4,
     tags: ["AI Search", "Research"],
-    featured: false
+    featured: false,
+    affiliateUrl: "https://www.perplexity.ai"
   },
   {
     title: "Bolt.new Review: Generate Full-Stack Apps From a Prompt",
@@ -240,7 +295,128 @@ const posts = [
     slug: "bolt-review",
     rating: 4,
     tags: ["AI Coding", "Web Apps"],
-    featured: false
+    featured: false,
+    affiliateUrl: "https://bolt.new"
+  },
+  {
+    title: "AutoGPT Review: Autonomous AI Agents in Practice",
+    desc: "Testing AutoGPT's ability to plan, execute, and self-correct on complex multi-step tasks without human hand-holding.",
+    cat: "Agents / Autonomous",
+    emoji: "🤖",
+    date: "June 2025",
+    slug: "autogpt-review",
+    rating: 3,
+    tags: ["AI Agents", "Autonomous"],
+    featured: false,
+    affiliateUrl: "https://github.com/Significant-Gravitas/AutoGPT"
+  },
+  {
+    title: "Devin Review: The Autonomous AI Software Engineer",
+    desc: "Can Devin actually ship code end-to-end? Testing bug fixes, feature builds, and PR management without supervision.",
+    cat: "Agents / Autonomous",
+    emoji: "🤖",
+    date: "June 2025",
+    slug: "devin-review",
+    rating: 4,
+    tags: ["AI Agents", "Coding"],
+    featured: false,
+    affiliateUrl: "https://devin.ai"
+  },
+  {
+    title: "n8n AI Review: Agentic Workflows Without Code",
+    desc: "Building autonomous multi-step automations with n8n's AI nodes — from web scraping to Slack, email, and CRM integration.",
+    cat: "Agents / Autonomous",
+    emoji: "🤖",
+    date: "June 2025",
+    slug: "n8n-ai-review",
+    rating: 4,
+    tags: ["AI Agents", "Automation"],
+    featured: false,
+    affiliateUrl: "https://n8n.io"
+  },
+  {
+    title: "Granola Review: AI Meeting Notes Tool",
+    desc: "Granola turns raw meeting notes into polished AI-enhanced documents.",
+    cat: "Productivity",
+    emoji: "🤖",
+    date: "July 2026",
+    slug: "granola-review",
+    rating: 4,
+    tags: ["AI", "Productivity"],
+    featured: false,
+    affiliateUrl: "https://www.granola.ai"
+  },
+  {
+    title: "Beehiiv Review: AI-Powered Newsletter Platform",
+    desc: "Beehiiv helps newsletters scale with AI-driven growth and monetization tools.",
+    cat: "Social / Marketing",
+    emoji: "⚡",
+    date: "July 2026",
+    slug: "beehiiv-review",
+    rating: 4,
+    tags: ["AI", "Productivity"],
+    featured: false,
+    affiliateUrl: "https://www.beehiiv.com"
+  },
+  {
+    title: "Wispr Flow Review: Voice Dictation AI",
+    desc: "Wispr Flow provides fast, smart voice dictation for writing.",
+    cat: "Productivity",
+    emoji: "🧠",
+    date: "July 2026",
+    slug: "wispr-flow-review",
+    rating: 4,
+    tags: ["AI", "Voice"],
+    featured: false,
+    affiliateUrl: "https://wisprflow.ai"
+  },
+  {
+    title: "Framer Review: No-Code Site Builder",
+    desc: "Framer lets designers create professional custom sites without code.",
+    cat: "No-Code / Design",
+    emoji: "⚡",
+    date: "July 2026",
+    slug: "framer-review",
+    rating: 4,
+    tags: ["Design", "No-Code"],
+    featured: false,
+    affiliateUrl: "https://www.framer.com"
+  },
+  {
+    title: "Superhuman Review: AI Productivity Suite",
+    desc: "Superhuman augments work with AI features across apps.",
+    cat: "Productivity",
+    emoji: "🤖",
+    date: "July 2026",
+    slug: "superhuman-review",
+    rating: 4,
+    tags: ["AI", "Productivity"],
+    featured: false,
+    affiliateUrl: "https://superhuman.com"
+  },
+  {
+    title: "Anything Review: AI Agent for Building Apps",
+    desc: "Anything lets you describe an app and builds it with AI.",
+    cat: "Agents / Autonomous",
+    emoji: "🤖",
+    date: "July 2026",
+    slug: "anything-review",
+    rating: 4,
+    tags: ["AI", "Agents"],
+    featured: false,
+    affiliateUrl: "https://anything.ai"
+  },
+  {
+    title: "Buffer Review: Social Media Scheduler with AI",
+    desc: "Buffer helps manage social content with AI suggestions.",
+    cat: "Social / Marketing",
+    emoji: "⚡",
+    date: "July 2026",
+    slug: "buffer-review",
+    rating: 4,
+    tags: ["AI", "Social"],
+    featured: false,
+    affiliateUrl: "https://buffer.com"
   }
 ];
 
@@ -251,7 +427,8 @@ const starSvg = '<svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/
 const iconMap = {
   "🧠": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z",
   "⚡": "M13 2L3 14h9l-1 8 10-12h-9l1-8z",
-  "🔍": "M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+  "🔍": "M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z",
+  "🤖": "M12 2c-1.1 0-2 .9-2 2v1H7c-1.66 0-3 1.34-3 3v4c0 1.66 1.34 3 3 3h1v3c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3h1c1.66 0 3-1.34 3-3V8c0-1.66-1.34-3-3-3h-3V4c0-1.1-.9-2-2-2zm-3 9c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-4 5h2v1h-2v-1z"
 };
 
 // ===== RENDER POSTS =====
@@ -282,21 +459,11 @@ function renderPosts(filter) {
       }
     }
 
-    // Particles
-    let particles = '';
-    for (let j = 0; j < 3; j++) {
-      const x = 20 + Math.random() * 60;
-      const y = 20 + Math.random() * 60;
-      const delay = Math.random() * 3;
-      particles += `<div class="pc-particle" style="left:${x}%;top:${y}%;animation-delay:${delay}s"></div>`;
-    }
-
     const badge = p.featured ? '<div class="pc-badge show">Featured</div>' : '';
 
     card.innerHTML = `
       <div class="pc-top">
         <div class="pc-glow"></div>
-        <div class="pc-particles">${particles}</div>
         ${badge}
         <div class="pc-category">${p.cat}</div>
         <div class="pc-icon">
@@ -310,7 +477,11 @@ function renderPosts(filter) {
         <p>${p.desc}</p>
         <div class="pc-meta">
           <div class="pc-rating">${stars}</div>
-          <span class="read-link">Read →</span>
+          <span class="read-link">Review →</span>
+        </div>
+        <div class="pc-affiliate-row">
+          <span>${p.date}</span>
+          <span>${p.affiliateUrl ? 'Affiliate/direct link inside' : 'Review'}</span>
         </div>
       </div>
     `;

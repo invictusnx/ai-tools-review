@@ -1,6 +1,16 @@
 https://invictusnx.github.io/ai-tools-review/
 https://invictusnx.github.io/ai-tools-review/about.html
+https://invictusnx.github.io/ai-tools-review/posts/anything-review.html
+https://invictusnx.github.io/ai-tools-review/posts/autogpt-review.html
+https://invictusnx.github.io/ai-tools-review/posts/beehiiv-review.html
+https://invictusnx.github.io/ai-tools-review/posts/bolt-review.html
+https://invictusnx.github.io/ai-tools-review/posts/buffer-review.html
 https://invictusnx.github.io/ai-tools-review/posts/claude-review.html
 https://invictusnx.github.io/ai-tools-review/posts/cursor-review.html
+https://invictusnx.github.io/ai-tools-review/posts/devin-review.html
+https://invictusnx.github.io/ai-tools-review/posts/framer-review.html
+https://invictusnx.github.io/ai-tools-review/posts/granola-review.html
+https://invictusnx.github.io/ai-tools-review/posts/n8n-ai-review.html
 https://invictusnx.github.io/ai-tools-review/posts/perplexity-review.html
-https://invictusnx.github.io/ai-tools-review/posts/bolt-review.html
+https://invictusnx.github.io/ai-tools-review/posts/superhuman-review.html
+https://invictusnx.github.io/ai-tools-review/posts/wispr-flow-review.html

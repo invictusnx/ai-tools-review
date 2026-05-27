@@ -1,131 +1,183 @@
-     1|<!doctype html>
-     2|<html lang="en">
-     3|<head>
+<!doctype html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bolt.new Review: Generate Full-Stack Apps From a Prompt | AI Tools Review</title>
-  <meta name="description" content="Testing Bolt.new ability to generate, deploy, and iterate on production-ready web apps from a single prompt." />
+  <title>Bolt.new Review: Generate Full-Stack Apps From a Single Prompt | AI Tools Review</title>
+  <meta name="description" content="Testing Bolt.new's ability to scaffold, deploy, and iterate on production-ready web apps from a single prompt." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-    13|<body>
+<body>
+
+<div id="noise-overlay" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true"></div>
+
 <div id="fluid-bg" aria-hidden="true">
   <div class="blob" id="b0"></div>
   <div class="blob" id="b1"></div>
   <div class="blob" id="b2"></div>
   <div class="blob" id="b3"></div>
 </div>
-    14|  <header class="site-header" id="siteHeader">
-  <a href="../" class="logo">AI TOOLS <span>REVIEW</span></a>
-  <nav>
+
+<div id="grid-bg" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a href="../index.html" class="logo">
+    <span class="logo-dot"></span>
+    AI TOOLS <span>REVIEW</span>
+  </a>
+  <div class="header-right">
     <a href="../about.html">About</a>
-    <a href="../">Reviews</a>
-  </nav>
+    <a href="../index.html" class="header-cta">Reviews</a>
+  </div>
 </header>
-    23|
-    24|  <article class="post-page">
-    25|    <a href="../" class="back-link">← Back to reviews</a>
-    26|    <h1>Bolt.new Review: Generate Full-Stack Apps From a Single Prompt</h1>
-    27|    <p class="post-subtitle">Testing Bolt.new's ability to scaffold, deploy, and iterate on production-ready web apps without opening a code editor.</p>
-    28|    <div class="post-header-meta">
-    29|      <span>May 2025</span>
-    30|      <span>Coding Tools</span>
-    31|      <span>6 min read</span>
-    32|    </div>
-    33|
-    34|    <p><strong>Verdict upfront:</strong> Bolt.new is the most capable prompt-to-app tool I've tested. For prototypes, MVPs, and simple full-stack apps, it genuinely works. For anything complex, you'll still need a real development environment.</p>
-    35|
-    36|    <div class="verdict-box">
-    37|      <h3>⭐ TL;DR</h3>
-    38|      <p><strong>Best for:</strong> Rapid prototyping, MVPs, landing pages, simple full-stack apps with auth and databases.<br>
-    39|      <strong>Weak at:</strong> Complex state management, advanced authentication flows, large-scale architecture.<br>
-    40|      <strong>Price:</strong> Free tier (limited). Pro $20/mo. Team $100/mo for 5 users.</p>
-    41|      <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new Free →</a>
-    42|      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
-    43|    </div>
-    44|
-    45|    <h2>What Is Bolt.new?</h2>
-    46|    <p>Bolt.new by StackBlitz is an AI-powered web app generator that runs entirely in your browser. You describe what you want in natural language, and it scaffolds a full-stack application with a frontend (React, Vue, or Svelte), backend (Node.js), and even database integration.</p>
-    47|    <p>Unlike Cursor or Copilot (which work inside an editor), Bolt.new handles the entire lifecycle — from idea to deployed URL — without you opening a terminal or IDE.</p>
-    48|
-    49|    <h2>What I Tested</h2>
-    50|    <ul>
-    51|      <li><strong>Simple landing page:</strong> A startup landing page with animations and contact form</li>
-    52|      <li><strong>Full-stack app:</strong> A task manager with authentication, database, and real-time updates</li>
-    53|      <li><strong>API integration:</strong> A dashboard that fetches from a third-party API and displays charts</li>
-    54|      <li><strong>Iteration:</strong> Making incremental changes and seeing how Bolt handles scope creep</li>
-    55|    </ul>
-    56|
-    57|    <h2>Performance Breakdown</h2>
-    58|
-    59|    <h3>1. Generation Speed ★★★★★</h3>
-    60|    <p>Bolt is fast. A full landing page with animations and a contact form took about 30 seconds from prompt to preview. A full-stack app with auth, database, and CRUD took roughly 2 minutes. For comparison, writing this manually would take 2-4 hours.</p>
-    61|
-    62|    <h3>2. Quality of Output ★★★☆☆</h3>
-    63|    <p>The generated code is reasonable but not production-grade. It gets the job done for an MVP but has some issues:</p>
-    64|    <ul>
-    65|      <li>Error handling is minimal or missing</li>
-    66|      <li>Security (input sanitisation, rate limiting) is often skipped</li>
-    67|      <li>Code organisation works for small projects but doesn't scale</li>
-    68|      <li>It occasionally uses deprecated package versions</li>
-    69|    </ul>
-    70|    <p>Think of it as a very skilled junior developer — it gets the structure right but needs a senior to review for production use.</p>
-    71|
-    72|    <h3>3. Iteration & Debugging ★★★☆☆</h3>
-    73|    <p>You can ask Bolt to add features or fix bugs. It handles simple iterations well ("add a dark mode toggle") but struggles with complex requests ("fix the race condition in the WebSocket handler"). Sometimes it introduces new bugs while fixing old ones.</p>
-    74|
-    75|    <h3>4. Deployment ★★★★☆</h3>
-    76|    <p>Bolt deploys directly from the browser — no need to configure hosting. You get a URL you can share immediately. For a prototype or MVP, this is incredibly convenient. For production, you'll want to export the code and set up proper CI/CD.</p>
-    77|
-    78|    <div class="pros-cons">
-    79|      <div class="pros-box">
-    80|        <h3>✅ Pros</h3>
-    81|        <ul>
-    82|          <li>Incredibly fast — app in minutes, not hours</li>
-    83|          <li>No setup required, works entirely in the browser</li>
-    84|          <li>Handles frontend + backend in one prompt</li>
-    85|          <li>One-click deployment with a shareable URL</li>
-    86|          <li>Great for prototypes and MVPs</li>
-    87|        </ul>
-    88|      </div>
-    89|      <div class="cons-box">
-    90|        <h3>❌ Cons</h3>
-    91|        <ul>
-    92|          <li>Code quality is not production-grade</li>
-    93|          <li>Struggles with complex debugging</li>
-    94|          <li>Can introduce regressions during iteration</li>
-    95|          <li>Limited to StackBlitz's browser runtime</li>
-    96|          <li>You can't easily export to local development</li>
-    97|        </ul>
-    98|      </div>
-    99|    </div>
-   100|
-   101|    <h2>Pricing</h2>
-   102|    <ul>
-   103|      <li><strong>Free:</strong> Limited public projects, basic features</li>
-   104|      <li><strong>Pro ($20/mo):</strong> Unlimited projects, private repos, GitHub sync, higher limits</li>
-   105|      <li><strong>Team ($100/mo):</strong> Up to 5 users, team workspaces, priority support</li>
-   106|    </ul>
-   107|
-   108|    <h2>Alternatives</h2>
-   109|    <ul>
-   110|      <li><strong>Lovable.dev</strong> — Similar prompt-to-app tool. Better for data-heavy apps and dashboards</li>
-   111|      <li><strong>v0 (Vercel)</strong> — Best for React component and UI generation. Lighter on full-stack</li>
-   112|      <li><strong>Cursor + Claude</strong> — More control, better quality, but requires more skill</li>
-   113|    </ul>
-   114|
-   115|    <div class="verdict-box">
-   116|      <h3>🏆 Final Verdict: 7.5/10</h3>
-   117|      <p>Bolt.new is the fastest way to go from idea to working app. For prototypes, MVPs, and hackathon projects it's genuinely useful. For production apps, use it as a starting point then export and refine. At $20/mo it pays for itself if you build more than one project per month.</p>
-   118|      <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new Free →</a>
-   119|      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
-   120|    </div>
-   121|  </article>
-   122|
-   123|  <footer class="site-footer">
+
+<article class="post-page">
+  <a href="../index.html" class="back-link">← Back to reviews</a>
+  <div class="post-content">
+    <h1>Bolt.new Review: Generate Full-Stack Apps From a Single Prompt</h1>
+    <p class="post-subtitle">Testing Bolt.new's ability to scaffold, deploy, and iterate on production-ready web apps without opening a code editor.</p>
+    <div class="post-header-meta">
+      <span>May 2025</span>
+      <span>Coding Tools</span>
+      <span>6 min read</span>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="post-stats">
+      <div class="post-stat">
+        <div class="ps-label">Overall</div>
+        <div class="score-badge" style="margin:0 auto">
+          <div class="sb-circle" style="--pct:75%"><span>7.5</span></div>
+          <div class="sb-label">/10</div>
+        </div>
+      </div>
+      <div class="post-stat">
+        <div class="ps-label">Ease of Use</div>
+        <div class="ps-value">★★★★★</div>
+        <div class="ps-sub">Beginner friendly</div>
+      </div>
+      <div class="post-stat">
+        <div class="ps-label">Code Quality</div>
+        <div class="ps-value">★★★☆☆</div>
+        <div class="ps-sub">MVP grade</div>
+      </div>
+      <div class="post-stat">
+        <div class="ps-label">Price</div>
+        <div class="ps-value">$20/mo</div>
+        <div class="ps-sub">Free tier available</div>
+      </div>
+      <div class="post-stat">
+        <div class="ps-label">Best For</div>
+        <div class="ps-value" style="font-size:1rem;letter-spacing:0;text-transform:none">Prototypes<br>&amp; MVPs</div>
+      </div>
+    </div>
+
+    <!-- Verdict box (visual) -->
+    <div class="verdict-box">
+      <h3>⭐ TL;DR</h3>
+      <p>Fastest way from idea to working app. Generation is incredible, code quality is MVP-grade. Perfect for prototypes, not production.</p>
+      <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new →</a>
+      <p class="affiliate-disclosure">Affiliate link. We may earn a commission at no extra cost to you.</p>
+    </div>
+
+    <h2>Performance Breakdown</h2>
+
+    <div class="rating-group">
+      <div class="rating-row">
+        <span class="rr-label">Generation Speed</span>
+        <div class="rr-track"><div class="rr-fill" style="width:95%"></div></div>
+        <span class="rr-num">5.0</span>
+      </div>
+      <div class="rating-row">
+        <span class="rr-label">Code Quality</span>
+        <div class="rr-track"><div class="rr-fill" style="width:60%"></div></div>
+        <span class="rr-num">3.0</span>
+      </div>
+      <div class="rating-row">
+        <span class="rr-label">Iteration &amp; Debug</span>
+        <div class="rr-track"><div class="rr-fill" style="width:60%"></div></div>
+        <span class="rr-num">3.0</span>
+      </div>
+      <div class="rating-row">
+        <span class="rr-label">Deployment</span>
+        <div class="rr-track"><div class="rr-fill" style="width:80%"></div></div>
+        <span class="rr-num">4.0</span>
+      </div>
+      <div class="rating-row">
+        <span class="rr-label">Value for Money</span>
+        <div class="rr-track"><div class="rr-fill" style="width:80%"></div></div>
+        <span class="rr-num">4.0</span>
+      </div>
+    </div>
+
+    <h2>What I Tested</h2>
+    <ul>
+      <li><strong>Landing page</strong> — Startup landing with animations + contact form</li>
+      <li><strong>Full-stack app</strong> — Task manager with auth, database, real-time updates</li>
+      <li><strong>API dashboard</strong> — Third-party data fetch with interactive charts</li>
+      <li><strong>Iteration</strong> — Incremental changes and scope creep handling</li>
+    </ul>
+
+    <h2>Pros &amp; Cons</h2>
+
+    <div class="pros-cons">
+      <div class="pros-box">
+        <h3>✓ Pros</h3>
+        <ul>
+          <li>App in minutes, not hours</li>
+          <li>No setup — works in browser</li>
+          <li>Full-stack + database in one prompt</li>
+          <li>One-click deploy with shareable URL</li>
+        </ul>
+      </div>
+      <div class="cons-box">
+        <h3>✗ Cons</h3>
+        <ul>
+          <li>Code not production-grade</li>
+          <li>Struggles with complex debugging</li>
+          <li>Regressions during iteration</li>
+          <li>Can't easily export to local dev</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="verdict-box">
+      <div style="display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap">
+        <div class="score-badge" style="flex-shrink:0">
+          <div class="sb-circle" style="--pct:75%"><span>7.5</span></div>
+          <div class="sb-label">Final Score</div>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <h3 style="margin:0 0 8px">🏆 Verdict</h3>
+          <p style="margin:0 0 12px">Fastest way from idea to working app. Use for prototypes, then export and refine for production. At $20/mo it pays for itself.</p>
+          <a class="affiliate-button" href="https://bolt.new" target="_blank" rel="noopener">Try Bolt.new →</a>
+          <p class="affiliate-disclosure" style="margin-top:4px">Affiliate link. We may earn a commission at no extra cost to you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side ornaments -->
+  <div class="post-ornaments" aria-hidden="true">
+    <div class="ornament-bar orn-l"></div>
+    <div class="ornament-bar orn-r"></div>
+    <div class="ornament-gem orn-gem-l1">◆</div>
+    <div class="ornament-gem orn-gem-l2">◆</div>
+    <div class="ornament-gem orn-gem-l3">◆</div>
+    <div class="ornament-gem orn-gem-r1">◆</div>
+    <div class="ornament-gem orn-gem-r2">◆</div>
+    <div class="ornament-gem orn-gem-r3">◆</div>
+  </div>
+</article>
+
+<footer class="site-footer">
   <div class="checkered">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
@@ -136,17 +188,39 @@
     <span></span><span></span><span></span><span></span><span></span>
   </div>
   <div class="footer-inner">
-    <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
-    <ul class="footer-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../">Reviews</a></li>
-      <li><a href="../about.html">About</a></li>
-    </ul>
+    <div class="footer-brand-col">
+      <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
+      <p>Honest, hands-on reviews of the AI tools actually worth using. Every tool tested before it gets a verdict.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="../index.html">Home</a>
+      <a href="../index.html">Reviews</a>
+      <a href="../about.html">About</a>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="../index.html">Chatbots & LLMs</a>
+      <a href="../index.html">Coding Tools</a>
+      <a href="../index.html">Search & Research</a>
+    </div>
   </div>
-  <p class="footer-copy">&copy; 2026 AI Tools Review &mdash; honest, hands-on reviews.</p>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AI Tools Review — honest, hands-on reviews. Some links are affiliate links — no extra cost to you.</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="X / Twitter">𝕏</a>
+      <a href="#" aria-label="GitHub">GH</a>
+      <a href="#" aria-label="RSS">RSS</a>
+    </div>
+  </div>
 </footer>
-   127|
+
 <script>
+(function(){
+  const glow = document.getElementById('cursor-glow');
+  if (glow) document.addEventListener('mousemove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+})();
+
 const blobEls = [document.getElementById('b0'),document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3')];
 const palette=[[30,0,50],[100,0,180],[150,0,255],[199,125,255],[100,0,180],[20,0,40]],palPos=[0,.2,.4,.6,.8,1];
 function lerpC(t){t=((t%1)+1)%1;for(let i=0;i<palPos.length-1;i++){if(t>=palPos[i]&&t<=palPos[i+1]){const f=(t-palPos[i])/(palPos[i+1]-palPos[i]);return[Math.round(palette[i][0]+(palette[i+1][0]-palette[i][0])*f),Math.round(palette[i][1]+(palette[i+1][1]-palette[i][1])*f),Math.round(palette[i][2]+(palette[i+1][2]-palette[i][2])*f)]}}return palette[palette.length-1]}
@@ -172,9 +246,9 @@ function updateFluid(){
     }
     const c=lerpC(p+.12*Math.sin(idle+i));
     e.style.left=(x*100)+'%';e.style.top=(y*100)+'%';
-    e.style.width=(sx*100)+'vw';e.style.height=(sy*100)+'vh';
+    e.style.width=(sx*100)+'vv';e.style.height=(sy*100)+'vh';
     e.style.transform='translate(-50%,-50%)';
-    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.28) 0%, rgba(${c[0]},${c[1]},${c[2]},.12) 40%, transparent 65%)`;
+    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.25) 0%, rgba(${c[0]},${c[1]},${c[2]},.1) 40%, transparent 65%)`;
   });
 }
 function rafFluid(){updateFluid();requestAnimationFrame(rafFluid)}
@@ -183,5 +257,6 @@ let ls=0;
 const n=document.querySelector('.site-header');
 window.addEventListener('scroll',()=>{const cw=window.scrollY;n.classList.toggle('hidden',cw>ls&&cw>80);ls=cw;},{passive:true});
 </script>
+
 </body>
-   128|</html>
+</html>

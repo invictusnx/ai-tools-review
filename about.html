@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<div id="noise-overlay" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true"></div>
+
 <div id="fluid-bg" aria-hidden="true">
   <div class="blob" id="b0"></div>
   <div class="blob" id="b1"></div>
@@ -19,15 +22,21 @@
   <div class="blob" id="b3"></div>
 </div>
 
+<div id="grid-bg" aria-hidden="true"></div>
+
 <header class="site-header" id="siteHeader">
-  <a href="." class="logo">AI TOOLS <span>REVIEW</span></a>
-  <nav>
+  <a href="index.html" class="logo">
+    <span class="logo-dot"></span>
+    AI TOOLS <span>REVIEW</span>
+  </a>
+  <div class="header-right">
     <a href="about.html">About</a>
-    <a href=".">Reviews</a>
-  </nav>
+    <a href="index.html" class="header-cta">Reviews</a>
+  </div>
 </header>
 
 <div class="about-page">
+  <a href="index.html" class="back-link">← Back to Reviews</a>
   <h1>ABOUT THIS SITE</h1>
 
   <p>AI Tools Review is exactly what it sounds like — honest, hands-on reviews of AI tools. No sponsored fluff, no vendor-soaked "reviews" written from a press release. Every tool on this site has been installed, tested, and put through real-world workflows before we publish a verdict.</p>
@@ -63,19 +72,43 @@
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
   <div class="footer-inner">
-    <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
-    <ul class="footer-links">
-      <li><a href=".">Home</a></li>
-      <li><a href=".">Reviews</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
+    <div class="footer-brand-col">
+      <div class="footer-brand">AI TOOLS <span>REVIEW</span></div>
+      <p>Honest, hands-on reviews of the AI tools actually worth using. Every tool tested before it gets a verdict.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="index.html">Reviews</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="index.html">Chatbots & LLMs</a>
+      <a href="index.html">Coding Tools</a>
+      <a href="index.html">Search & Research</a>
+    </div>
   </div>
-  <p class="footer-copy">&copy; 2026 AI Tools Review &mdash; honest, hands-on reviews.</p>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AI Tools Review — honest, hands-on reviews. Some links are affiliate links — no extra cost to you.</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="X / Twitter">𝕏</a>
+      <a href="#" aria-label="GitHub">GH</a>
+      <a href="#" aria-label="RSS">RSS</a>
+    </div>
+  </div>
 </footer>
 
 <script>
+(function(){
+  const glow = document.getElementById('cursor-glow');
+  if (glow) document.addEventListener('mousemove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+})();
+
 const blobEls = [document.getElementById('b0'),document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3')];
 const palette=[[30,0,50],[100,0,180],[150,0,255],[199,125,255],[100,0,180],[20,0,40]],palPos=[0,.2,.4,.6,.8,1];
 function lerpC(t){t=((t%1)+1)%1;for(let i=0;i<palPos.length-1;i++){if(t>=palPos[i]&&t<=palPos[i+1]){const f=(t-palPos[i])/(palPos[i+1]-palPos[i]);return[Math.round(palette[i][0]+(palette[i+1][0]-palette[i][0])*f),Math.round(palette[i][1]+(palette[i+1][1]-palette[i][1])*f),Math.round(palette[i][2]+(palette[i+1][2]-palette[i][2])*f)]}}return palette[palette.length-1]}
@@ -103,7 +136,7 @@ function updateFluid(){
     e.style.left=(x*100)+'%';e.style.top=(y*100)+'%';
     e.style.width=(sx*100)+'vw';e.style.height=(sy*100)+'vh';
     e.style.transform='translate(-50%,-50%)';
-    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.28) 0%, rgba(${c[0]},${c[1]},${c[2]},.12) 40%, transparent 65%)`;
+    e.style.background=`radial-gradient(ellipse at 50% 50%, rgba(${c[0]},${c[1]},${c[2]},.25) 0%, rgba(${c[0]},${c[1]},${c[2]},.1) 40%, transparent 65%)`;
   });
 }
 function rafFluid(){updateFluid();requestAnimationFrame(rafFluid)}
